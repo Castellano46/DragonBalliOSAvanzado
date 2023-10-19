@@ -8,26 +8,21 @@
 import Foundation
 
 class HeroesViewModel: HeroesViewControllerDelegate {
-    // MARK: - Dependencies -
     private let apiProvider: ApiProviderProtocol
     private let secureDataProvider: SecureDataProviderProtocol
 
-    // MARK: - Properties -
     var viewState: ((HeroesViewState) -> Void)?
     var heroesCount: Int {
         heroes.count
     }
     private var heroes: Heroes = []
 
-
-    // MARK: - Initializers -
     init(apiProvider: ApiProviderProtocol,
          secureDataProvider: SecureDataProviderProtocol) {
         self.apiProvider = apiProvider
         self.secureDataProvider = secureDataProvider
     }
 
-    // MARK: - Public functions -
     func onViewAppear() {
         viewState?(.loading(true))
 

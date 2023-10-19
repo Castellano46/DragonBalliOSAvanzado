@@ -7,14 +7,12 @@
 
 import UIKit
 
-// MARK: - View Protocol -
 protocol LoginViewControllerDelegate {
     var viewState: ((LoginViewState) -> Void)? { get set }
     var heroesViewModel: HeroesViewControllerDelegate { get }
     func onLoginPressed(email: String?, password: String?)
 }
 
-// MARK: - View State -
 enum LoginViewState {
     case loading(_ isLoading: Bool)
     case showErrorEmail(_ error: String?)
@@ -23,24 +21,20 @@ enum LoginViewState {
 }
 
 class LoginViewController: UIViewController {
-    // MARK: - IBOutlet -
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailFieldError: UILabel!
     @IBOutlet weak var passwordFieldError: UILabel!
     @IBOutlet weak var loadingView: UIView!
 
-    // MARK: - IBAction -
     @IBAction func onLoginPressed() {
         // Obtener el email y password introducidos por el usuario
         // y enviarlos al servicio del API de Login
         viewModel?.onLoginPressed(
             email: emailField.text,
-            password: passwordField.text
-        )
+            password: passwordField.text)
     }
 
-    // MARK: - Public Properties -
     var viewModel: LoginViewControllerDelegate?
 
     private enum FieldType: Int {
@@ -48,7 +42,6 @@ class LoginViewController: UIViewController {
         case password
     }
 
-    // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
@@ -64,7 +57,6 @@ class LoginViewController: UIViewController {
         heroesViewController.viewModel = viewModel?.heroesViewModel
     }
 
-    // MARK: - Private functions -
     private func initViews() {
         emailField.delegate = self
         emailField.tag = FieldType.email.rawValue
@@ -80,7 +72,6 @@ class LoginViewController: UIViewController {
     }
 
     @objc func dismissKeyboard() {
-        // Ocultar el teclado al pulsar en cualquier punto de la vista
         view.endEditing(true)
     }
 

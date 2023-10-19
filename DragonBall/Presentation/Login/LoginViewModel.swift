@@ -8,11 +8,9 @@
 import Foundation
 
 class LoginViewModel: LoginViewControllerDelegate {
-    // MARK: - Dependencies -
     private let apiProvider: ApiProviderProtocol
     private let secureDataProvider: SecureDataProviderProtocol
 
-    // MARK: - Properties -
     var viewState: ((LoginViewState) -> Void)?
     var heroesViewModel: HeroesViewControllerDelegate {
         HeroesViewModel(
@@ -21,12 +19,10 @@ class LoginViewModel: LoginViewControllerDelegate {
         )
     }
 
-
-    // MARK: - Initializers -
     init(
         apiProvider: ApiProviderProtocol,
-        secureDataProvider: SecureDataProviderProtocol
-    ) {
+        secureDataProvider: SecureDataProviderProtocol)
+    {
         self.apiProvider = apiProvider
         self.secureDataProvider = secureDataProvider
 
@@ -34,15 +30,13 @@ class LoginViewModel: LoginViewControllerDelegate {
             self,
             selector: #selector(onLoginResponse),
             name: NotificationCenter.apiLoginNotification,
-            object: nil
-        )
+            object: nil)
     }
 
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
 
-    // MARK: - Public functions -
     func onLoginPressed(email: String?, password: String?) {
         viewState?(.loading(true))
 
@@ -61,15 +55,13 @@ class LoginViewModel: LoginViewControllerDelegate {
 
             self.doLoginWith(
                 email: email ?? "",
-                password: password ?? ""
-            )
+                password: password ?? "")
         }
     }
 
     @objc func onLoginResponse(_ notification: Notification) {
         defer { viewState?(.loading(false)) }
 
-        // Parsear resultado que vendrá en notification.userInfo
         guard let token = notification.userInfo?[NotificationCenter.tokenKey] as? String,
               !token.isEmpty else {
             return
@@ -79,7 +71,6 @@ class LoginViewModel: LoginViewControllerDelegate {
         viewState?(.navigateToNext)
     }
 
-    // MARK: - Private functions -
     private func isValid(email: String?) -> Bool {
         email?.isEmpty == false && (email?.contains("@") ?? false)
     }

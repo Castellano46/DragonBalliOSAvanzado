@@ -7,7 +7,6 @@
 
 import UIKit
 
-// MARK: - View Protocol -
 protocol HeroesViewControllerDelegate {
     var viewState: ((HeroesViewState) -> Void)? { get set }
     var heroesCount: Int { get }
@@ -16,22 +15,18 @@ protocol HeroesViewControllerDelegate {
     func heroBy(index: Int) -> Hero?
 }
 
-// MARK: - View State -
 enum HeroesViewState {
     case loading(_ isLoading: Bool)
     case updateData
 }
 
-// MARK: - Class -
 class HeroesViewController: UIViewController {
     // MARK: - IBOutlet -
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
 
-    // MARK: - Public Properties -
     var viewModel: HeroesViewControllerDelegate?
 
-    // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
@@ -39,7 +34,6 @@ class HeroesViewController: UIViewController {
         viewModel?.onViewAppear()
     }
 
-    // MARK: - Private functions -
     private func initViews() {
         tableView.register(
             UINib(nibName: HeroCellView.identifier, bundle: nil),
@@ -84,8 +78,7 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.updateView(
                 name: hero.name,
                 photo: hero.photo,
-                description: hero.description
-            )
+                description: hero.description)
         }
 
         return cell
