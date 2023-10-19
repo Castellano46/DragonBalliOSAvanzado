@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeroCellView" rowHeight="256" id="aFk-In-YMq" customClass="HeroCellView" customModule="DragonBall" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aFk-In-YMq" id="aM7-ZP-0jJ">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-5b-gmN">
+                        <rect key="frame" x="36" y="19" width="321" height="218"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-FV-2LD">
+                                <rect key="frame" x="8" y="8" width="305" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9aW-Qj-GRT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                <color key="textColor" red="0.81084007020000004" green="0.45997279880000003" blue="0.0078820604830000009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-g6-Qbx">
+                                <rect key="frame" x="0.0" y="37" width="181" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ahW-g6-Qbx" secondAttribute="height" multiplier="1:1" id="rTo-hq-Na7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvy-5l-SEH">
+                                <rect key="frame" x="189" y="37" width="128" height="173"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nvy-5l-SEH" firstAttribute="leading" secondItem="ahW-g6-Qbx" secondAttribute="trailing" constant="8" id="5bJ-FB-Jcr"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvy-5l-SEH" secondAttribute="trailing" constant="4" id="7FW-YW-CEm"/>
+                            <constraint firstAttribute="bottom" secondItem="ahW-g6-Qbx" secondAttribute="bottom" id="9QR-5D-B6D"/>
+                            <constraint firstItem="VYf-FV-2LD" firstAttribute="leading" secondItem="FlS-5b-gmN" secondAttribute="leading" constant="8" id="AUo-yx-OcK"/>
+                            <constraint firstItem="Nvy-5l-SEH" firstAttribute="top" secondItem="ahW-g6-Qbx" secondAttribute="top" id="SO0-u4-yS6"/>
+                            <constraint firstItem="ahW-g6-Qbx" firstAttribute="top" secondItem="VYf-FV-2LD" secondAttribute="bottom" constant="8" id="TGx-1r-7XR"/>
+                            <constraint firstItem="ahW-g6-Qbx" firstAttribute="leading" secondItem="FlS-5b-gmN" secondAttribute="leading" id="gth-Th-tAo"/>
+                            <constraint firstAttribute="bottom" secondItem="Nvy-5l-SEH" secondAttribute="bottom" constant="8" id="jBR-kL-uLA"/>
+                            <constraint firstAttribute="trailing" secondItem="VYf-FV-2LD" secondAttribute="trailing" constant="8" id="lnH-OR-ZP0"/>
+                            <constraint firstItem="VYf-FV-2LD" firstAttribute="top" secondItem="FlS-5b-gmN" secondAttribute="top" constant="8" id="oQu-TY-p8d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FlS-5b-gmN" firstAttribute="top" secondItem="aM7-ZP-0jJ" secondAttribute="topMargin" constant="8" id="7RH-qz-Epv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="FlS-5b-gmN" secondAttribute="trailing" constant="16" id="Ch3-EJ-rUu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="FlS-5b-gmN" secondAttribute="bottom" constant="8" id="WN6-1m-wnj"/>
+                    <constraint firstItem="FlS-5b-gmN" firstAttribute="leading" secondItem="aM7-ZP-0jJ" secondAttribute="leadingMargin" constant="16" id="tlH-jy-xrx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="FlS-5b-gmN" id="3UR-Cn-Kv6"/>
+                <outlet property="heroDescription" destination="Nvy-5l-SEH" id="MmH-ZM-EKO"/>
+                <outlet property="name" destination="VYf-FV-2LD" id="DhL-hY-iZ8"/>
+                <outlet property="photo" destination="ahW-g6-Qbx" id="zmb-eq-RHq"/>
+            </connections>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
