@@ -28,8 +28,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
 
     @IBAction func onLoginPressed() {
-        // Obtener el email y password introducidos por el usuario
-        // y enviarlos al servicio del API de Login
+        // Obtiene email y password del usuario y los envia a la api
         viewModel?.onLoginPressed(
             email: emailField.text,
             password: passwordField.text)
@@ -72,6 +71,7 @@ class LoginViewController: UIViewController {
     }
 
     @objc func dismissKeyboard() {
+        // Oculta el teclado al pulsar
         view.endEditing(true)
     }
 

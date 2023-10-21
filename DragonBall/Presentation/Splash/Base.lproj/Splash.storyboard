@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Y6W-OH-hqX" customClass="SplashViewController" customModule="DragonBalliOSAvanzado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Ps8-zs-7IB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-Si-rvY">
+                                <rect key="frame" x="178" y="50" width="37" height="752"/>
+                                <color key="color" systemColor="tableCellBlueTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LOg-Si-rvY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3Zk-af-lTm"/>
+                            <constraint firstItem="LOg-Si-rvY" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WOm-kQ-3UT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LOg-Si-rvY" secondAttribute="bottom" constant="16" id="gih-tf-ML4"/>
+                            <constraint firstItem="Ps8-zs-7IB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ibJ-CB-PIk"/>
+                            <constraint firstAttribute="bottom" secondItem="Ps8-zs-7IB" secondAttribute="bottom" id="ovf-Im-Xfb"/>
+                            <constraint firstItem="Ps8-zs-7IB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="p6A-PC-0Bk"/>
+                            <constraint firstAttribute="trailing" secondItem="Ps8-zs-7IB" secondAttribute="trailing" id="wMF-Pt-2tt"/>
+                            <constraint firstItem="LOg-Si-rvY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ydj-ip-5hP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loading" destination="LOg-Si-rvY" id="AXE-Ti-jVb"/>
+                        <segue destination="hhl-vl-rGQ" kind="show" identifier="SPLASH_TO_LOGIN" id="WiE-Ue-JDM"/>
+                        <segue destination="yvA-5f-N8z" kind="show" identifier="SPLASH_TO_HEROES" id="Zzl-Tn-wWS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="xAw-jy-pGL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="hhl-vl-rGQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="480-aY-ajd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZw-yQ-saX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="-108"/>
+        </scene>
+        <!--Heroes-->
+        <scene sceneID="nnq-YS-1KM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Heroes" id="yvA-5f-N8z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="k6f-jb-PyS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srP-3i-qdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_splash" width="214" height="306"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

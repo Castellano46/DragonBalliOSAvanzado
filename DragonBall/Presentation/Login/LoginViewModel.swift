@@ -21,8 +21,8 @@ class LoginViewModel: LoginViewControllerDelegate {
 
     init(
         apiProvider: ApiProviderProtocol,
-        secureDataProvider: SecureDataProviderProtocol)
-    {
+        secureDataProvider: SecureDataProviderProtocol
+    ) {
         self.apiProvider = apiProvider
         self.secureDataProvider = secureDataProvider
 
@@ -30,7 +30,8 @@ class LoginViewModel: LoginViewControllerDelegate {
             self,
             selector: #selector(onLoginResponse),
             name: NotificationCenter.apiLoginNotification,
-            object: nil)
+            object: nil
+        )
     }
 
     deinit {
@@ -55,7 +56,8 @@ class LoginViewModel: LoginViewControllerDelegate {
 
             self.doLoginWith(
                 email: email ?? "",
-                password: password ?? "")
+                password: password ?? ""
+            )
         }
     }
 

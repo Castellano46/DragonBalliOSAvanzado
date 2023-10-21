@@ -30,6 +30,14 @@
 		0FE7C9DD2AD713EE0034AB58 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE7C9DC2AD713EE0034AB58 /* KeychainSwift */; };
 		0FE7C9DF2AD714A80034AB58 /* SecureDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7C9DE2AD714A80034AB58 /* SecureDataProvider.swift */; };
 		0FE7C9E12AD717720034AB58 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7C9E02AD717720034AB58 /* ApiProvider.swift */; };
+		EB75013A2AE3B92A002EF2CF /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB75013C2AE3B92A002EF2CF /* Splash.storyboard */; };
+		EB7501422AE3BDD5002EF2CF /* HeroDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7501412AE3BDD5002EF2CF /* HeroDetail.storyboard */; };
+		EB7501442AE3BE03002EF2CF /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501432AE3BE03002EF2CF /* HeroDetailViewController.swift */; };
+		EB7501462AE3BE44002EF2CF /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501452AE3BE44002EF2CF /* HeroDetailViewModel.swift */; };
+		EB7501482AE3C832002EF2CF /* HeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7501472AE3C832002EF2CF /* HeroLocation.swift */; };
+		EB75014B2AE3D801002EF2CF /* HeroAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75014A2AE3D801002EF2CF /* HeroAnnotation.swift */; };
+		EB8624882AE1A17300DF6632 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8624872AE1A17300DF6632 /* SplashViewController.swift */; };
+		EB86248A2AE1A18200DF6632 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8624892AE1A18200DF6632 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +83,14 @@
 		0FBCFDD62AD5CD3D00B7394A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0FE7C9DE2AD714A80034AB58 /* SecureDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProvider.swift; sourceTree = "<group>"; };
 		0FE7C9E02AD717720034AB58 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		EB75013B2AE3B92A002EF2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
+		EB7501412AE3BDD5002EF2CF /* HeroDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetail.storyboard; sourceTree = "<group>"; };
+		EB7501432AE3BE03002EF2CF /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		EB7501452AE3BE44002EF2CF /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
+		EB7501472AE3C832002EF2CF /* HeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocation.swift; sourceTree = "<group>"; };
+		EB75014A2AE3D801002EF2CF /* HeroAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnnotation.swift; sourceTree = "<group>"; };
+		EB8624872AE1A17300DF6632 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EB8624892AE1A18200DF6632 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0F6551942ADF02C9005C1F05 /* HeroDAO.swift */,
+				EB7501472AE3C832002EF2CF /* HeroLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,8 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				0FBCFDD42AD5C34000B7394A /* Launch */,
+				EB8624842AE1A13B00DF6632 /* Splash */,
 				0FBCFDD52AD5C35000B7394A /* Login */,
 				0F6585BD2ADDD504001553BE /* Heroes */,
+				EB7501402AE3BD8E002EF2CF /* HeroeDetail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -261,6 +280,35 @@
 				0FBCFDD62AD5CD3D00B7394A /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EB7501402AE3BD8E002EF2CF /* HeroeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EB7501492AE3D7BD002EF2CF /* MapAnnotations */,
+				EB7501412AE3BDD5002EF2CF /* HeroDetail.storyboard */,
+				EB7501432AE3BE03002EF2CF /* HeroDetailViewController.swift */,
+				EB7501452AE3BE44002EF2CF /* HeroDetailViewModel.swift */,
+			);
+			path = HeroeDetail;
+			sourceTree = "<group>";
+		};
+		EB7501492AE3D7BD002EF2CF /* MapAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				EB75014A2AE3D801002EF2CF /* HeroAnnotation.swift */,
+			);
+			path = MapAnnotations;
+			sourceTree = "<group>";
+		};
+		EB8624842AE1A13B00DF6632 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				EB75013C2AE3B92A002EF2CF /* Splash.storyboard */,
+				EB8624872AE1A17300DF6632 /* SplashViewController.swift */,
+				EB8624892AE1A18200DF6632 /* SplashViewModel.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +426,10 @@
 				0FBCFDAC2AD5C1E800B7394A /* LaunchScreen.storyboard in Resources */,
 				0F6585CA2ADDDCAB001553BE /* HeroCellView.xib in Resources */,
 				0FBCFDA92AD5C1E800B7394A /* Assets.xcassets in Resources */,
+				EB7501422AE3BDD5002EF2CF /* HeroDetail.storyboard in Resources */,
 				0F6585BF2ADDD526001553BE /* Heroes.storyboard in Resources */,
 				0FBCFDA42AD5C1E500B7394A /* Login.storyboard in Resources */,
+				EB75013A2AE3B92A002EF2CF /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,19 +454,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB86248A2AE1A18200DF6632 /* SplashViewModel.swift in Sources */,
 				0FBCFDA12AD5C1E500B7394A /* LoginViewController.swift in Sources */,
 				0FBCFDA72AD5C1E500B7394A /* DragonBall.xcdatamodeld in Sources */,
+				EB75014B2AE3D801002EF2CF /* HeroAnnotation.swift in Sources */,
 				0F6585C12ADDD53A001553BE /* HeroesViewController.swift in Sources */,
 				0F6551972ADF04F3005C1F05 /* CoreDataStack.swift in Sources */,
 				0FE7C9DF2AD714A80034AB58 /* SecureDataProvider.swift in Sources */,
+				EB8624882AE1A17300DF6632 /* SplashViewController.swift in Sources */,
 				0F6585C32ADDD545001553BE /* HeroesViewModel.swift in Sources */,
 				0F6551952ADF02C9005C1F05 /* HeroDAO.swift in Sources */,
+				EB7501442AE3BE03002EF2CF /* HeroDetailViewController.swift in Sources */,
 				0FBCFD9D2AD5C1E500B7394A /* AppDelegate.swift in Sources */,
 				0F6585C82ADDDAF3001553BE /* HeroCellView.swift in Sources */,
 				0FBCFDD72AD5CD3D00B7394A /* LoginViewModel.swift in Sources */,
 				0FE7C9E12AD717720034AB58 /* ApiProvider.swift in Sources */,
 				0F65519B2ADF0C21005C1F05 /* Hero.swift in Sources */,
 				0FBCFD9F2AD5C1E500B7394A /* SceneDelegate.swift in Sources */,
+				EB7501482AE3C832002EF2CF /* HeroLocation.swift in Sources */,
+				EB7501462AE3BE44002EF2CF /* HeroDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +523,14 @@
 				0FBCFDAB2AD5C1E800B7394A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB75013C2AE3B92A002EF2CF /* Splash.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB75013B2AE3B92A002EF2CF /* Base */,
+			);
+			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

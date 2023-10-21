@@ -11,7 +11,7 @@
         <!--Heroes View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HeroesViewController" id="Y6W-OH-hqX" customClass="HeroesViewController" customModule="DragonBall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeroesViewController" id="Y6W-OH-hqX" customClass="HeroesViewController" customModule="DragonBalliOSAvanzado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,11 +50,22 @@
                     <connections>
                         <outlet property="loadingView" destination="WAu-nh-bCZ" id="jxW-hv-a1z"/>
                         <outlet property="tableView" destination="kXB-Jc-jdO" id="9PI-c9-zYE"/>
+                        <segue destination="Exf-sk-JRg" kind="show" identifier="HEROES_TO_HERO_DETAIL" id="iV3-av-IfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+        <!--HeroDetail-->
+        <scene sceneID="7JR-qo-ToC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroDetail" id="Exf-sk-JRg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="N6u-AF-lMJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpu-kB-EEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="17"/>
         </scene>
     </scenes>
     <resources>

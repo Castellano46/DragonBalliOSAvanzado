@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import DragonBall
+@testable import DragonBalliOSAvanzado
 
 final class DragonBallTests: XCTestCase {
 
